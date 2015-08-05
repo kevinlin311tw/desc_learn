@@ -25,9 +25,9 @@ for k = 1:size(TrainTestSet, 1)
     TrainSet = TrainTestSet{k, 1};    
     TestSet = TrainTestSet{k, 2};
 
-    DatasetDir = sprintf('%s/%s/', DataDir, TestSet);
+    DatasetDir = sprintf('%s/%s', DataDir, TestSet);
 
-    TestPairsPath = sprintf('%s/patches/%s.txt', DatasetDir, TestPairsFile);
+    TestPairsPath = sprintf('%s/%s.txt', DatasetDir, TestPairsFile);
 
     DescDir = sprintf('%s/desc/train_%s/%s/', DatasetDir, TrainSet, ProjType);
     DescPath = sprintf('%s/desc.mat', DescDir);
